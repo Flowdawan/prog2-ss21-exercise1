@@ -77,7 +77,30 @@ public class ResultTest {
         List<Integer> expected = null;
         List<Integer> actual = Result.gradingStudents(Arrays.asList());
         assertEquals(expected, actual);
+    }
 
+    @DisplayName("Testing that the number of students (first value) defines how much grades are going to get checked\nWith more grades than students")
+    @Test
+    void studentsNumberEqualGrades_Test1() {
+        List<Integer> expected = null;
+        List<Integer> actual = Result.gradingStudents(Arrays.asList(3, 70, 80, 90, 100));
+        assertEquals(expected, actual);
+    }
+
+    @DisplayName("Testing that the number of students (first value) defines how much grades are going to get checked\nWith less grades than students")
+    @Test
+    void studentsNumberEqualGrades_Test2() {
+        List<Integer> expected = null;
+        List<Integer> actual = Result.gradingStudents(Arrays.asList(4, 70, 80, 90));
+        assertEquals(expected, actual);
+    }
+
+    @DisplayName("Testing that the number of students (first value) defines how much grades are going to get checked\nWith right number of both")
+    @Test
+    void studentsNumberEqualGrades_Test3() {
+        List<Integer> expected = new ArrayList<Integer>(Arrays.asList(4, 70, 80, 90, 100));
+        List<Integer> actual = Result.gradingStudents(Arrays.asList(4, 70, 80, 90, 100));
+        assertEquals(expected, actual);
 
     }
 }
