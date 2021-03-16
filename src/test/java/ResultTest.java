@@ -20,13 +20,30 @@ public class ResultTest {
         System.out.println("Finished Testing Results");
     }
 
-    @DisplayName("Testing what happens if the number of students is not between 1 and 60")
+    @DisplayName("Testing if the number of students is not between 1 <= n <= 60 with 0")
     @Test
-    void test_1(){
+    void numberOfStudents_Test1(){
         List<Integer> expected = null;
         List<Integer> actual = Result.gradingStudents(Arrays.asList(0, 40, 30, 67));
         assertEquals(expected, actual);
     }
+
+    @DisplayName("Testing if the number of students is not between 1 <= n <= 60 with negative value")
+    @Test
+    void numberOfStudents_Test2(){
+        List<Integer> expected = null;
+        List<Integer> actual = Result.gradingStudents(Arrays.asList(-2, 20, 60, 100, 42));
+        assertEquals(expected, actual);
+    }
+
+    @DisplayName("Testing if the number of students is not between 1 <= n <= 60 with value above 60")
+    @Test
+    void numberOfStudents_Test3(){
+        List<Integer> expected = null;
+        List<Integer> actual = Result.gradingStudents(Arrays.asList(61, 40, 30, 67));
+        assertEquals(expected, actual);
+    }
+
 
 
 
