@@ -44,7 +44,23 @@ public class ResultTest {
         assertEquals(expected, actual);
     }
 
+    @DisplayName("Testing if one of the grades is not between 0 <= grades <= 100 with a grad above 101")
+    @Test
+    void valueOfGradesInvalid_Test1(){
+        List<Integer> expected = null;
+        List<Integer> actual = Result.gradingStudents(Arrays.asList(5, 40, 30, 67, 101, 4));
+        assertEquals(expected, actual);
 
+    }
+
+    @DisplayName("Testing if one of the grades is not between 0 <= grades <= 100 with a grad below 0")
+    @Test
+    void valueOfGradesInvalid_Test2(){
+        List<Integer> expected = null;
+        List<Integer> actual = Result.gradingStudents(Arrays.asList(5, 40, 30, -2, 60, 4));
+        assertEquals(expected, actual);
+
+    }
 
 
 }
