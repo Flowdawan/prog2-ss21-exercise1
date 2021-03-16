@@ -57,7 +57,16 @@ public class ResultTest {
     @Test
     void valueOfGradesInvalid_Test2(){
         List<Integer> expected = null;
-        List<Integer> actual = Result.gradingStudents(Arrays.asList(5, 40, 30, -2, 60, 4));
+        List<Integer> actual = Result.gradingStudents(Arrays.asList(5, 40, 20, -2, 60, 4));
+        assertEquals(expected, actual);
+
+    }
+
+    @DisplayName("Testing if the parameter list is just 'null'")
+    @Test
+    void listIsNull_Test1(){
+        List<Integer> expected = null;
+        List<Integer> actual = Result.gradingStudents(null);
         assertEquals(expected, actual);
 
     }
