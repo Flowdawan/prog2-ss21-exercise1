@@ -28,6 +28,7 @@ public class ResultTest {
         assertEquals(expected, actual);
     }
 
+
     @DisplayName("Testing if the number of students is not between 1 <= n <= 60 with negative value")
     @Test
     void numberOfStudents_Test2() {
@@ -102,5 +103,13 @@ public class ResultTest {
         List<Integer> actual = Result.gradingStudents(Arrays.asList(4, 70, 80, 90, 100));
         assertEquals(expected, actual);
 
+    }
+
+    @DisplayName("Testing the grading policy")
+    @Test
+    void gradingPolicy_Test1() {
+        List<Integer> expected = new ArrayList<Integer>(Arrays.asList(10, 5, 77, 30, 60, 40, 85, 40, 45, 24, 100));
+        List<Integer> actual = new ArrayList<Integer>(Arrays.asList(10, 5, 77, 29, 58, 39, 84, 38, 44, 24, 99));
+        assertEquals(expected, actual);
     }
 }
