@@ -1,4 +1,6 @@
 //https://github.com/Flowdawan/prog2-ss21-exercise1.git
+//Durch die Übungsstunde habe ich gemerkt, ich hätte vielleicht die Reihenfolge von den Testcases anders machen können. Spezifisches wie "null", "empty", ... erst am Schluss eher.
+//Und nächsten mal darauf Achten wirklich jeden Testcase einzelnt zu commiten, habe manchmal mehrere auf einmal commited.
 import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
