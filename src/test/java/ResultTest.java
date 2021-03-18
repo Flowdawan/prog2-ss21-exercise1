@@ -108,8 +108,8 @@ public class ResultTest {
     @DisplayName("Testing the grading policy")
     @Test
     void gradingPolicy_Test1() {
-        List<Integer> expected = new ArrayList<Integer>(Arrays.asList(10, 5, 77, 30, 60, 40, 85, 40, 45, 24, 100));
-        List<Integer> actual = new ArrayList<Integer>(Arrays.asList(10, 5, 77, 29, 58, 39, 84, 38, 44, 24, 99));
+        List<Integer> expected = new ArrayList<Integer>(Arrays.asList(10, 5, 77, 29, 60, 40, 85, 40, 45, 24, 100));
+        List<Integer> actual = Result.gradingStudents(Arrays.asList(10, 5, 77, 29, 60, 40, 85, 40, 45, 24, 100));
         assertEquals(expected, actual);
     }
 }
